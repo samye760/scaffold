@@ -5,9 +5,9 @@ format:
 	black *.py
 	
 lint:
-	pylint --disable=R,C palindrome.py
+	pylint --disable=R,C *.py
 	
 test:
-	python -m pytest -vv --cov=palindrome test_palindrome.py
+	python -m pytest -vv --cov=* *.py
 	
 all: install format lint test
